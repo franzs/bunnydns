@@ -24,7 +24,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -e ".[dev]"
       - name: Lint with ruff
-        run: ruff check src/ tests/
+        run: ruff check --ignore E501 src/ tests/
       - name: Type check with mypy
         run: mypy src/bunny_dns/
       - name: Test with pytest
