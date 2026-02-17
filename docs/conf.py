@@ -1,6 +1,6 @@
 project = "bunnydns"
-copyright = "2025, Your Name"
-author = "Your Name"
+copyright = "2026, Franz Schwartau"
+author = "Franz Schwartau"
 
 extensions = [
     "sphinx.ext.autodoc",
