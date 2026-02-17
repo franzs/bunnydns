@@ -341,7 +341,10 @@
 <span class="sd">        zone_id:</span>
 <span class="sd">            The ID of the DNS zone to export.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;/dnszone/</span><span class="si">{</span><span class="n">zone_id</span><span class="si">}</span><span class="s2">/export&quot;</span><span class="p">,</span> <span class="n">raw_response</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+        <span class="n">result</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span>
+            <span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;/dnszone/</span><span class="si">{</span><span class="n">zone_id</span><span class="si">}</span><span class="s2">/export&quot;</span><span class="p">,</span> <span class="n">raw_response</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
 
 
 <div class="viewcode-block" id="BunnyDNS.check_dns_zone_availability">
@@ -354,10 +357,10 @@
 <span class="sd">        domain:</span>
 <span class="sd">            The domain name to check availability for.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span>
+        <span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span>
             <span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="s2">&quot;/dnszone/checkavailability&quot;</span><span class="p">,</span> <span class="n">json_body</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="n">domain</span><span class="p">}</span>
         <span class="p">)</span>
-        <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Available&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Available&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span></div>
 
 
 <div class="viewcode-block" id="BunnyDNS.import_dns_records">
