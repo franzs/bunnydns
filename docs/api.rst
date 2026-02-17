@@ -72,7 +72,7 @@ Enums
 Exceptions
 ----------
 
-.. autoexception:: bunnydns.BunnyDNSException
+.. autoexception:: bunnydns.BunnyDNSError
 .. autoexception:: bunnydns.BunnyDNSAuthenticationError
 .. autoexception:: bunnydns.BunnyDNSNotFoundError
 .. autoexception:: bunnydns.BunnyDNSAPIError

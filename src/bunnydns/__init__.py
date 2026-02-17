@@ -20,7 +20,7 @@ from .enums import (
 from .exceptions import (
     BunnyDNSAPIError,
     BunnyDNSAuthenticationError,
-    BunnyDNSException,
+    BunnyDNSError,
     BunnyDNSNotFoundError,
 )
 from .models import (
@@ -61,7 +61,7 @@ __all__ = [
     # Exceptions
     "BunnyDNSAPIError",
     "BunnyDNSAuthenticationError",
-    "BunnyDNSException",
+    "BunnyDNSError",
     "BunnyDNSNotFoundError",
     # Version
     "__version__",
