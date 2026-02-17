@@ -251,7 +251,10 @@ class BunnyDNS:
         zone_id:
             The ID of the DNS zone to export.
         """
-        return self._request("GET", f"/dnszone/{zone_id}/export", raw_response=True)
+        result: str = self._request(
+            "GET", f"/dnszone/{zone_id}/export", raw_response=True
+        )
+        return result
 
     def check_dns_zone_availability(self, domain: str) -> bool:
         """Check if a DNS zone is available to be added.
@@ -261,10 +264,10 @@ class BunnyDNS:
         domain:
             The domain name to check availability for.
         """
-        data = self._request(
+        data: dict[str, Any] = self._request(
             "POST", "/dnszone/checkavailability", json_body={"Name": domain}
         )
-        return data.get("Available", False)
+        return bool(data.get("Available", False))
 
     def import_dns_records(
         self, zone_id: int, zone_file: str

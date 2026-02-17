@@ -3,15 +3,18 @@
 from __future__ import annotations
 
 import enum
+from collections.abc import Mapping
 from datetime import datetime
-from typing import Any
+from typing import Any, TypeVar
+
+E = TypeVar("E", bound=enum.Enum)
 
 
 def _parse_enum(
-    enum_cls: type[enum.Enum],
+    enum_cls: type[E],
     value: Any,
-    int_map: dict[int, enum.Enum] | None = None,
-) -> enum.Enum | None:
+    int_map: Mapping[int, E] | None = None,
+) -> E | None:
     """Return an *enum_cls* member from a string, int, or ``None``."""
     if value is None:
         return None
@@ -31,7 +34,7 @@ def _parse_enum(
     raise TypeError(f"Cannot convert {type(value)} to {enum_cls.__name__}")
 
 
-def _enum_to_int(member: enum.Enum, int_map: dict[int, enum.Enum]) -> int:
+def _enum_to_int(member: enum.Enum, int_map: Mapping[int, enum.Enum]) -> int:
     """Convert an enum member back to its integer representation for API requests."""
     for integer, mapped_member in int_map.items():
         if mapped_member is member:
