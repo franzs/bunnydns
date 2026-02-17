@@ -1,13 +1,7 @@
 bunnydns
-=========
+========
 
-A Python SDK for the `Bunny.net <https://bunny.net>`_ DNS API.
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   api
+A Python SDK for the `Bunny.net DNS API <https://docs.bunny.net/api-reference/core/dns-zone/>`_.
 
 Installation
 ------------
@@ -27,3 +21,12 @@ Quick Start
    zones = client.list_dns_zones()
    for zone in zones.items:
        print(zone.domain)
+
+.. toctree::
+   :maxdepth: 3
+   :caption: API Reference
+
+   api/client
+   api/models
+   api/enums
+   api/exceptions

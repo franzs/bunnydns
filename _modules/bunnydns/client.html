@@ -39,11 +39,8 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
-</ul>
-
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
         </div>
       </div>
     </nav>
@@ -102,7 +99,7 @@
 
 
 <div class="viewcode-block" id="BunnyDNS">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNS">[docs]</a>
+<a class="viewcode-back" href="../../client.html#bunnydns.BunnyDNS">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">BunnyDNS</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Client for the Bunny.net DNS API.</span>
 
@@ -190,7 +187,7 @@
     <span class="c1"># -- DNS Zone endpoints -------------------------------------------------</span>
 
 <div class="viewcode-block" id="BunnyDNS.list_dns_zones">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNS.list_dns_zones">[docs]</a>
+<a class="viewcode-back" href="../../client.html#bunnydns.BunnyDNS.list_dns_zones">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list_dns_zones</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">page</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
@@ -218,7 +215,7 @@
 
 
 <div class="viewcode-block" id="BunnyDNS.add_dns_zone">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNS.add_dns_zone">[docs]</a>
+<a class="viewcode-back" href="../../client.html#bunnydns.BunnyDNS.add_dns_zone">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">add_dns_zone</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">domain</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -241,7 +238,7 @@
 
 
 <div class="viewcode-block" id="BunnyDNS.get_dns_zone">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNS.get_dns_zone">[docs]</a>
+<a class="viewcode-back" href="../../client.html#bunnydns.BunnyDNS.get_dns_zone">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_dns_zone</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zone_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DnsZone</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieve a single DNS zone by its ID.</span>
 
@@ -255,7 +252,7 @@
 
 
 <div class="viewcode-block" id="BunnyDNS.update_dns_zone">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNS.update_dns_zone">[docs]</a>
+<a class="viewcode-back" href="../../client.html#bunnydns.BunnyDNS.update_dns_zone">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">update_dns_zone</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">zone_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
@@ -319,7 +316,7 @@
 
 
 <div class="viewcode-block" id="BunnyDNS.delete_dns_zone">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNS.delete_dns_zone">[docs]</a>
+<a class="viewcode-back" href="../../client.html#bunnydns.BunnyDNS.delete_dns_zone">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete_dns_zone</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zone_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete a DNS zone.</span>
 
@@ -332,7 +329,7 @@
 
 
 <div class="viewcode-block" id="BunnyDNS.export_dns_zone">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNS.export_dns_zone">[docs]</a>
+<a class="viewcode-back" href="../../client.html#bunnydns.BunnyDNS.export_dns_zone">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">export_dns_zone</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zone_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Export a DNS zone as a BIND zone file.</span>
 
@@ -348,7 +345,7 @@
 
 
 <div class="viewcode-block" id="BunnyDNS.check_dns_zone_availability">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNS.check_dns_zone_availability">[docs]</a>
+<a class="viewcode-back" href="../../client.html#bunnydns.BunnyDNS.check_dns_zone_availability">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">check_dns_zone_availability</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if a DNS zone is available to be added.</span>
 
@@ -364,7 +361,7 @@
 
 
 <div class="viewcode-block" id="BunnyDNS.import_dns_records">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNS.import_dns_records">[docs]</a>
+<a class="viewcode-back" href="../../client.html#bunnydns.BunnyDNS.import_dns_records">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">import_dns_records</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">zone_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">zone_file</span><span class="p">:</span> <span class="nb">str</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DnsZoneImportResult</span><span class="p">:</span>
@@ -386,7 +383,7 @@
     <span class="c1"># -- DNS Record endpoints -----------------------------------------------</span>
 
 <div class="viewcode-block" id="BunnyDNS.add_dns_record">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNS.add_dns_record">[docs]</a>
+<a class="viewcode-back" href="../../client.html#bunnydns.BunnyDNS.add_dns_record">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">add_dns_record</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zone_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">record</span><span class="p">:</span> <span class="n">DnsRecordInput</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DnsRecord</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a DNS record to a zone.</span>
 
@@ -404,7 +401,7 @@
 
 
 <div class="viewcode-block" id="BunnyDNS.update_dns_record">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNS.update_dns_record">[docs]</a>
+<a class="viewcode-back" href="../../client.html#bunnydns.BunnyDNS.update_dns_record">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">update_dns_record</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">zone_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">record_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">record</span><span class="p">:</span> <span class="n">DnsRecordInput</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -429,7 +426,7 @@
 
 
 <div class="viewcode-block" id="BunnyDNS.delete_dns_record">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNS.delete_dns_record">[docs]</a>
+<a class="viewcode-back" href="../../client.html#bunnydns.BunnyDNS.delete_dns_record">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete_dns_record</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zone_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">record_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete a DNS record from a zone.</span>
 
@@ -446,7 +443,7 @@
     <span class="c1"># -- DNSSEC endpoints ---------------------------------------------------</span>
 
 <div class="viewcode-block" id="BunnyDNS.enable_dnssec">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNS.enable_dnssec">[docs]</a>
+<a class="viewcode-back" href="../../client.html#bunnydns.BunnyDNS.enable_dnssec">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">enable_dnssec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zone_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DnsSecDsRecord</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Enable DNSSEC on a DNS zone.</span>
 
@@ -460,7 +457,7 @@
 
 
 <div class="viewcode-block" id="BunnyDNS.disable_dnssec">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNS.disable_dnssec">[docs]</a>
+<a class="viewcode-back" href="../../client.html#bunnydns.BunnyDNS.disable_dnssec">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">disable_dnssec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zone_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DnsSecDsRecord</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Disable DNSSEC on a DNS zone.</span>
 
@@ -482,7 +479,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Your Name.</p>
+    <p>&#169; Copyright 2026, Franz Schwartau.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

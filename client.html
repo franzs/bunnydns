@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client &mdash; bunnydns  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            bunnydns
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Client</a><ul>
+<li><a class="reference internal" href="#bunnydns.BunnyDNS"><code class="docutils literal notranslate"><span class="pre">BunnyDNS</span></code></a><ul>
+<li><a class="reference internal" href="#bunnydns.BunnyDNS.list_dns_zones"><code class="docutils literal notranslate"><span class="pre">BunnyDNS.list_dns_zones()</span></code></a></li>
+<li><a class="reference internal" href="#bunnydns.BunnyDNS.add_dns_zone"><code class="docutils literal notranslate"><span class="pre">BunnyDNS.add_dns_zone()</span></code></a></li>
+<li><a class="reference internal" href="#bunnydns.BunnyDNS.get_dns_zone"><code class="docutils literal notranslate"><span class="pre">BunnyDNS.get_dns_zone()</span></code></a></li>
+<li><a class="reference internal" href="#bunnydns.BunnyDNS.update_dns_zone"><code class="docutils literal notranslate"><span class="pre">BunnyDNS.update_dns_zone()</span></code></a></li>
+<li><a class="reference internal" href="#bunnydns.BunnyDNS.delete_dns_zone"><code class="docutils literal notranslate"><span class="pre">BunnyDNS.delete_dns_zone()</span></code></a></li>
+<li><a class="reference internal" href="#bunnydns.BunnyDNS.export_dns_zone"><code class="docutils literal notranslate"><span class="pre">BunnyDNS.export_dns_zone()</span></code></a></li>
+<li><a class="reference internal" href="#bunnydns.BunnyDNS.check_dns_zone_availability"><code class="docutils literal notranslate"><span class="pre">BunnyDNS.check_dns_zone_availability()</span></code></a></li>
+<li><a class="reference internal" href="#bunnydns.BunnyDNS.import_dns_records"><code class="docutils literal notranslate"><span class="pre">BunnyDNS.import_dns_records()</span></code></a></li>
+<li><a class="reference internal" href="#bunnydns.BunnyDNS.add_dns_record"><code class="docutils literal notranslate"><span class="pre">BunnyDNS.add_dns_record()</span></code></a></li>
+<li><a class="reference internal" href="#bunnydns.BunnyDNS.update_dns_record"><code class="docutils literal notranslate"><span class="pre">BunnyDNS.update_dns_record()</span></code></a></li>
+<li><a class="reference internal" href="#bunnydns.BunnyDNS.delete_dns_record"><code class="docutils literal notranslate"><span class="pre">BunnyDNS.delete_dns_record()</span></code></a></li>
+<li><a class="reference internal" href="#bunnydns.BunnyDNS.enable_dnssec"><code class="docutils literal notranslate"><span class="pre">BunnyDNS.enable_dnssec()</span></code></a></li>
+<li><a class="reference internal" href="#bunnydns.BunnyDNS.disable_dnssec"><code class="docutils literal notranslate"><span class="pre">BunnyDNS.disable_dnssec()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">bunnydns</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Client</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/client.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="client">
+<h1>Client<a class="headerlink" href="#client" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="bunnydns.BunnyDNS">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">bunnydns.</span></span><span class="sig-name descname"><span class="pre">BunnyDNS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">access_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://api.bunny.net'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bunnydns/client.html#BunnyDNS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bunnydns.BunnyDNS" title="Link to this definition"></a></dt>
+<dd><p>Client for the Bunny.net DNS API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>access_key</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – Your Bunny.net API access key.</p></li>
+<li><p><strong>base_url</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – Override the default API base URL (useful for testing).</p></li>
+<li><p><strong>timeout</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – HTTP request timeout in seconds.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">BunnyDNS</span><span class="p">(</span><span class="n">access_key</span><span class="o">=</span><span class="s2">&quot;your-api-key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">zones</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_dns_zones</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">zone</span> <span class="ow">in</span> <span class="n">zones</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">zone</span><span class="o">.</span><span class="n">domain</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="bunnydns.BunnyDNS.list_dns_zones">
+<span class="sig-name descname"><span class="pre">list_dns_zones</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">per_page</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bunnydns/client.html#BunnyDNS.list_dns_zones"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bunnydns.BunnyDNS.list_dns_zones" title="Link to this definition"></a></dt>
+<dd><p>Retrieve a paginated list of DNS zones on the account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>page</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – Page number (default <code class="docutils literal notranslate"><span class="pre">1</span></code>).</p></li>
+<li><p><strong>per_page</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – Number of items per page (<code class="docutils literal notranslate"><span class="pre">5</span></code> – <code class="docutils literal notranslate"><span class="pre">1000</span></code>, default <code class="docutils literal notranslate"><span class="pre">1000</span></code>).</p></li>
+<li><p><strong>search</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – Optional search term to filter results by domain name.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="models.html#bunnydns.DnsZoneList" title="bunnydns.models.DnsZoneList"><code class="xref py py-class docutils literal notranslate"><span class="pre">DnsZoneList</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bunnydns.BunnyDNS.add_dns_zone">
+<span class="sig-name descname"><span class="pre">add_dns_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">records</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bunnydns/client.html#BunnyDNS.add_dns_zone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bunnydns.BunnyDNS.add_dns_zone" title="Link to this definition"></a></dt>
+<dd><p>Create a new DNS zone.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – The domain name for the new zone.</p></li>
+<li><p><strong>records</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>[<a class="reference internal" href="models.html#bunnydns.DnsRecordInput" title="bunnydns.models.DnsRecordInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">DnsRecordInput</span></code></a>] | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – Optional list of DNS records to create together with the zone.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="models.html#bunnydns.DnsZone" title="bunnydns.models.DnsZone"><code class="xref py py-class docutils literal notranslate"><span class="pre">DnsZone</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bunnydns.BunnyDNS.get_dns_zone">
+<span class="sig-name descname"><span class="pre">get_dns_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zone_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bunnydns/client.html#BunnyDNS.get_dns_zone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bunnydns.BunnyDNS.get_dns_zone" title="Link to this definition"></a></dt>
+<dd><p>Retrieve a single DNS zone by its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>zone_id</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – The ID of the DNS zone to retrieve.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="models.html#bunnydns.DnsZone" title="bunnydns.models.DnsZone"><code class="xref py py-class docutils literal notranslate"><span class="pre">DnsZone</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bunnydns.BunnyDNS.update_dns_zone">
+<span class="sig-name descname"><span class="pre">update_dns_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zone_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_nameservers_enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nameserver1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nameserver2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">soa_email</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logging_enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logging_ip_anonymization_enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_anonymization_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">certificate_key_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bunnydns/client.html#BunnyDNS.update_dns_zone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bunnydns.BunnyDNS.update_dns_zone" title="Link to this definition"></a></dt>
+<dd><p>Update the settings of an existing DNS zone.</p>
+<p>Only non-<code class="docutils literal notranslate"><span class="pre">None</span></code> parameters will be included in the update request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>zone_id</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – The ID of the DNS zone to update.</p></li>
+<li><p><strong>custom_nameservers_enabled</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – Enable or disable custom nameservers.</p></li>
+<li><p><strong>nameserver1</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – The first custom nameserver.</p></li>
+<li><p><strong>nameserver2</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – The second custom nameserver.</p></li>
+<li><p><strong>soa_email</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – The SOA email address for the zone.</p></li>
+<li><p><strong>logging_enabled</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – Enable or disable query logging.</p></li>
+<li><p><strong>logging_ip_anonymization_enabled</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – Enable or disable IP anonymization in logs.</p></li>
+<li><p><strong>log_anonymization_type</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="enums.html#bunnydns.LogAnonymizationType" title="bunnydns.enums.LogAnonymizationType"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogAnonymizationType</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – The type of log anonymization to apply.</p></li>
+<li><p><strong>certificate_key_type</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="enums.html#bunnydns.CertificateKeyType" title="bunnydns.enums.CertificateKeyType"><code class="xref py py-class docutils literal notranslate"><span class="pre">CertificateKeyType</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span>) – The private key type for wildcard certificates.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="models.html#bunnydns.DnsZone" title="bunnydns.models.DnsZone"><code class="xref py py-class docutils literal notranslate"><span class="pre">DnsZone</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bunnydns.BunnyDNS.delete_dns_zone">
+<span class="sig-name descname"><span class="pre">delete_dns_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zone_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bunnydns/client.html#BunnyDNS.delete_dns_zone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bunnydns.BunnyDNS.delete_dns_zone" title="Link to this definition"></a></dt>
+<dd><p>Delete a DNS zone.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>zone_id</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – The ID of the DNS zone to delete.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bunnydns.BunnyDNS.export_dns_zone">
+<span class="sig-name descname"><span class="pre">export_dns_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zone_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bunnydns/client.html#BunnyDNS.export_dns_zone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bunnydns.BunnyDNS.export_dns_zone" title="Link to this definition"></a></dt>
+<dd><p>Export a DNS zone as a BIND zone file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>zone_id</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – The ID of the DNS zone to export.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bunnydns.BunnyDNS.check_dns_zone_availability">
+<span class="sig-name descname"><span class="pre">check_dns_zone_availability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bunnydns/client.html#BunnyDNS.check_dns_zone_availability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bunnydns.BunnyDNS.check_dns_zone_availability" title="Link to this definition"></a></dt>
+<dd><p>Check if a DNS zone is available to be added.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>domain</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – The domain name to check availability for.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bunnydns.BunnyDNS.import_dns_records">
+<span class="sig-name descname"><span class="pre">import_dns_records</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zone_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zone_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bunnydns/client.html#BunnyDNS.import_dns_records"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bunnydns.BunnyDNS.import_dns_records" title="Link to this definition"></a></dt>
+<dd><p>Import DNS records from a BIND zone file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>zone_id</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – The ID of the DNS zone to import records into.</p></li>
+<li><p><strong>zone_file</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – The zone file content as a string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="models.html#bunnydns.DnsZoneImportResult" title="bunnydns.models.DnsZoneImportResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DnsZoneImportResult</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bunnydns.BunnyDNS.add_dns_record">
+<span class="sig-name descname"><span class="pre">add_dns_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zone_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bunnydns/client.html#BunnyDNS.add_dns_record"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bunnydns.BunnyDNS.add_dns_record" title="Link to this definition"></a></dt>
+<dd><p>Add a DNS record to a zone.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>zone_id</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – The ID of the DNS zone to add the record to.</p></li>
+<li><p><strong>record</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="models.html#bunnydns.DnsRecordInput" title="bunnydns.models.DnsRecordInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">DnsRecordInput</span></code></a></span>) – The DNS record data to create.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="models.html#bunnydns.DnsRecord" title="bunnydns.models.DnsRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">DnsRecord</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bunnydns.BunnyDNS.update_dns_record">
+<span class="sig-name descname"><span class="pre">update_dns_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zone_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bunnydns/client.html#BunnyDNS.update_dns_record"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bunnydns.BunnyDNS.update_dns_record" title="Link to this definition"></a></dt>
+<dd><p>Update an existing DNS record.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>zone_id</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – The ID of the DNS zone that contains the record.</p></li>
+<li><p><strong>record_id</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – The ID of the DNS record to update.</p></li>
+<li><p><strong>record</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="models.html#bunnydns.DnsRecordInput" title="bunnydns.models.DnsRecordInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">DnsRecordInput</span></code></a></span>) – The updated DNS record data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bunnydns.BunnyDNS.delete_dns_record">
+<span class="sig-name descname"><span class="pre">delete_dns_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zone_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bunnydns/client.html#BunnyDNS.delete_dns_record"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bunnydns.BunnyDNS.delete_dns_record" title="Link to this definition"></a></dt>
+<dd><p>Delete a DNS record from a zone.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>zone_id</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – The ID of the DNS zone that contains the record.</p></li>
+<li><p><strong>record_id</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – The ID of the DNS record to delete.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bunnydns.BunnyDNS.enable_dnssec">
+<span class="sig-name descname"><span class="pre">enable_dnssec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zone_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bunnydns/client.html#BunnyDNS.enable_dnssec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bunnydns.BunnyDNS.enable_dnssec" title="Link to this definition"></a></dt>
+<dd><p>Enable DNSSEC on a DNS zone.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>zone_id</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – The ID of the DNS zone for which DNSSEC will be enabled.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="models.html#bunnydns.DnsSecDsRecord" title="bunnydns.models.DnsSecDsRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">DnsSecDsRecord</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bunnydns.BunnyDNS.disable_dnssec">
+<span class="sig-name descname"><span class="pre">disable_dnssec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zone_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/bunnydns/client.html#BunnyDNS.disable_dnssec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bunnydns.BunnyDNS.disable_dnssec" title="Link to this definition"></a></dt>
+<dd><p>Disable DNSSEC on a DNS zone.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>zone_id</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – The ID of the DNS zone for which DNSSEC will be disabled.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="models.html#bunnydns.DnsSecDsRecord" title="bunnydns.models.DnsSecDsRecord"><code class="xref py py-class docutils literal notranslate"><span class="pre">DnsSecDsRecord</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Franz Schwartau.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

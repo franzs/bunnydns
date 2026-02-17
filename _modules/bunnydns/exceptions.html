@@ -39,11 +39,8 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
-</ul>
-
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
         </div>
       </div>
     </nav>
@@ -73,28 +70,28 @@
 
 
 <div class="viewcode-block" id="BunnyDNSError">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNSError">[docs]</a>
+<a class="viewcode-back" href="../../exceptions.html#bunnydns.BunnyDNSError">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">BunnyDNSError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Base exception for all Bunny DNS API errors.&quot;&quot;&quot;</span></div>
 
 
 
 <div class="viewcode-block" id="BunnyDNSAuthenticationError">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNSAuthenticationError">[docs]</a>
+<a class="viewcode-back" href="../../exceptions.html#bunnydns.BunnyDNSAuthenticationError">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">BunnyDNSAuthenticationError</span><span class="p">(</span><span class="n">BunnyDNSError</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Raised when the API returns a 401 Unauthorized response.&quot;&quot;&quot;</span></div>
 
 
 
 <div class="viewcode-block" id="BunnyDNSNotFoundError">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNSNotFoundError">[docs]</a>
+<a class="viewcode-back" href="../../exceptions.html#bunnydns.BunnyDNSNotFoundError">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">BunnyDNSNotFoundError</span><span class="p">(</span><span class="n">BunnyDNSError</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Raised when the API returns a 404 Not Found response.&quot;&quot;&quot;</span></div>
 
 
 
 <div class="viewcode-block" id="BunnyDNSAPIError">
-<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNSAPIError">[docs]</a>
+<a class="viewcode-back" href="../../exceptions.html#bunnydns.BunnyDNSAPIError">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">BunnyDNSAPIError</span><span class="p">(</span><span class="n">BunnyDNSError</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Raised for any other non-success HTTP status code.&quot;&quot;&quot;</span>
 
@@ -113,7 +110,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Your Name.</p>
+    <p>&#169; Copyright 2026, Franz Schwartau.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
