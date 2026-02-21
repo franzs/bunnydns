@@ -140,10 +140,16 @@ class TestListDnsZones:
 
     def test_per_page_boundary(self, client, mocked_responses, base_url, sample_zone_list_data):
         mocked_responses.add(
-            responses.GET, f"{base_url}/dnszone", json=sample_zone_list_data, status=200,
+            responses.GET,
+            f"{base_url}/dnszone",
+            json=sample_zone_list_data,
+            status=200,
         )
         mocked_responses.add(
-            responses.GET, f"{base_url}/dnszone", json=sample_zone_list_data, status=200,
+            responses.GET,
+            f"{base_url}/dnszone",
+            json=sample_zone_list_data,
+            status=200,
         )
         client.list_dns_zones(per_page=5)
         client.list_dns_zones(per_page=1000)
@@ -248,7 +254,9 @@ class TestUpdateDnsZone:
         assert body["LoggingEnabled"] is True
         assert body["SoaEmail"] == "new@example.com"
 
-    def test_only_sends_non_none_fields(self, client, mocked_responses, base_url, sample_zone_data):
+    def test_only_sends_non_none_fields(
+        self, client, mocked_responses, base_url, sample_zone_data
+    ):
         mocked_responses.add(
             responses.POST,
             f"{base_url}/dnszone/12345",

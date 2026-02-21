@@ -361,9 +361,7 @@ class TestDnsRecordLifecycleIntegration:
 
         # Verify by re-fetching the zone
         zone = client.get_dns_zone(zone_id=test_zone.id)
-        updated_record = next(
-            (r for r in zone.records if r.id == record.id), None
-        )
+        updated_record = next((r for r in zone.records if r.id == record.id), None)
         assert updated_record is not None
         assert updated_record.value == "192.0.2.20"
         assert updated_record.ttl == 600

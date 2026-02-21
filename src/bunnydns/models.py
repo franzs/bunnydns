@@ -31,6 +31,7 @@ from .enums import (
 @dataclass(frozen=True)
 class IPGeoLocationInfo:
     """Geolocation / ASN information for an IP address."""
+
     asn: int
     country_code: str | None = None
     country: str | None = None
@@ -53,6 +54,7 @@ class IPGeoLocationInfo:
 @dataclass(frozen=True)
 class GeolocationInfo:
     """Latitude / longitude geolocation information."""
+
     latitude: float
     longitude: float
     country: str | None = None
@@ -73,6 +75,7 @@ class GeolocationInfo:
 @dataclass(frozen=True)
 class EnvironmentalVariable:
     """Key / value pair attached to a Script record."""
+
     name: str | None = None
     value: str | None = None
 
@@ -89,6 +92,7 @@ class EnvironmentalVariable:
 @dataclass
 class DnsRecordInput:
     """DNS record data used when creating or updating zones/records via the API."""
+
     id: int | None = None
     type: RecordType | None = None
     ttl: int | None = None
@@ -162,8 +166,7 @@ class DnsRecordInput:
             data["Disabled"] = self.disabled
         if self.environmental_variables is not None:
             data["EnviromentalVariables"] = [
-                {"Name": ev.name, "Value": ev.value}
-                for ev in self.environmental_variables
+                {"Name": ev.name, "Value": ev.value} for ev in self.environmental_variables
             ]
         if self.comment is not None:
             data["Comment"] = self.comment
@@ -178,6 +181,7 @@ class DnsRecordInput:
 @dataclass(frozen=True)
 class DnsRecord:
     """A single DNS record inside a zone."""
+
     id: int
     ttl: int
     weight: int
@@ -231,16 +235,12 @@ class DnsRecord:
             flags=data.get("Flags", 0),
             tag=data.get("Tag"),
             link_name=data.get("LinkName"),
-            ip_geo_location_info=IPGeoLocationInfo.from_dict(
-                data.get("IPGeoLocationInfo")
-            ),
+            ip_geo_location_info=IPGeoLocationInfo.from_dict(data.get("IPGeoLocationInfo")),
             geolocation_info=GeolocationInfo.from_dict(data.get("GeolocationInfo")),
             monitor_status=_parse_enum(
                 MonitorStatus, data.get("MonitorStatus"), MONITOR_STATUS_BY_INT
             ),
-            monitor_type=_parse_enum(
-                MonitorType, data.get("MonitorType"), MONITOR_TYPE_BY_INT
-            ),
+            monitor_type=_parse_enum(MonitorType, data.get("MonitorType"), MONITOR_TYPE_BY_INT),
             environmental_variables=env_vars,
             latency_zone=data.get("LatencyZone"),
             smart_routing_type=_parse_enum(
@@ -263,6 +263,7 @@ class DnsRecord:
 @dataclass(frozen=True)
 class DnsZone:
     """Represents a single DNS zone."""
+
     id: int
     date_modified: datetime | None
     date_created: datetime | None
@@ -292,9 +293,7 @@ class DnsZone:
             custom_nameservers_enabled=data.get("CustomNameserversEnabled", False),
             nameservers_next_check=_parse_dt(data.get("NameserversNextCheck")),
             logging_enabled=data.get("LoggingEnabled", False),
-            logging_ip_anonymization_enabled=data.get(
-                "LoggingIPAnonymizationEnabled", False
-            ),
+            logging_ip_anonymization_enabled=data.get("LoggingIPAnonymizationEnabled", False),
             dns_sec_enabled=data.get("DnsSecEnabled", False),
             domain=data.get("Domain"),
             records=records,
@@ -320,6 +319,7 @@ class DnsZone:
 @dataclass(frozen=True)
 class DnsZoneList:
     """Paginated list of :class:`DnsZone` objects."""
+
     current_page: int
     total_items: int
     has_more_items: bool
@@ -343,6 +343,7 @@ class DnsZoneList:
 @dataclass(frozen=True)
 class DnsZoneImportResult:
     """Result of a DNS zone import operation."""
+
     records_successful: int
     records_failed: int
     records_skipped: int
@@ -362,6 +363,7 @@ class DnsZoneImportResult:
 @dataclass(frozen=True)
 class DnsSecDsRecord:
     """DNSSEC DS record information for a DNS zone."""
+
     enabled: bool
     algorithm: int
     key_tag: int

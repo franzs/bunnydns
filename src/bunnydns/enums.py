@@ -7,6 +7,7 @@ import enum
 
 class RecordType(enum.Enum):
     """DNS record type."""
+
     A = "A"
     AAAA = "AAAA"
     CNAME = "CNAME"
@@ -47,6 +48,7 @@ RECORD_TYPE_BY_INT: dict[int, RecordType] = {
 
 class MonitorStatus(enum.Enum):
     """Health-monitor status of a DNS record."""
+
     UNKNOWN = "Unknown"
     ONLINE = "Online"
     OFFLINE = "Offline"
@@ -61,6 +63,7 @@ MONITOR_STATUS_BY_INT: dict[int, MonitorStatus] = {
 
 class MonitorType(enum.Enum):
     """Health-monitor type of a DNS record."""
+
     NONE = "None"
     PING = "Ping"
     HTTP = "Http"
@@ -77,6 +80,7 @@ MONITOR_TYPE_BY_INT: dict[int, MonitorType] = {
 
 class SmartRoutingType(enum.Enum):
     """Smart routing mode for a DNS record."""
+
     NONE = "None"
     LATENCY = "Latency"
     GEOLOCATION = "Geolocation"
@@ -91,6 +95,7 @@ SMART_ROUTING_TYPE_BY_INT: dict[int, SmartRoutingType] = {
 
 class AccelerationStatus(enum.Enum):
     """Acceleration status of a DNS record."""
+
     NONE = "None"
     PENDING = "Pending"
     PROCESSING = "Processing"
@@ -109,6 +114,7 @@ ACCELERATION_STATUS_BY_INT: dict[int, AccelerationStatus] = {
 
 class LogAnonymizationType(enum.Enum):
     """Log anonymization mode for a DNS zone."""
+
     ONE_DIGIT = "OneDigit"
     DROP = "Drop"
 
@@ -121,6 +127,7 @@ LOG_ANONYMIZATION_TYPE_BY_INT: dict[int, LogAnonymizationType] = {
 
 class CertificateKeyType(enum.Enum):
     """Private-key type used for automatic TLS certificates."""
+
     ECDSA = "Ecdsa"
     RSA = "Rsa"
 

@@ -251,9 +251,7 @@ class BunnyDNS:
         zone_id:
             The ID of the DNS zone to export.
         """
-        result: str = self._request(
-            "GET", f"/dnszone/{zone_id}/export", raw_response=True
-        )
+        result: str = self._request("GET", f"/dnszone/{zone_id}/export", raw_response=True)
         return result
 
     def check_dns_zone_availability(self, domain: str) -> bool:
@@ -269,9 +267,7 @@ class BunnyDNS:
         )
         return bool(data.get("Available", False))
 
-    def import_dns_records(
-        self, zone_id: int, zone_file: str
-    ) -> DnsZoneImportResult:
+    def import_dns_records(self, zone_id: int, zone_file: str) -> DnsZoneImportResult:
         """Import DNS records from a BIND zone file.
 
         Parameters
@@ -281,9 +277,7 @@ class BunnyDNS:
         zone_file:
             The zone file content as a string.
         """
-        data = self._request(
-            "POST", f"/dnszone/{zone_id}/import", text_body=zone_file
-        )
+        data = self._request("POST", f"/dnszone/{zone_id}/import", text_body=zone_file)
         return DnsZoneImportResult.from_dict(data)
 
     # -- DNS Record endpoints -----------------------------------------------
@@ -298,14 +292,10 @@ class BunnyDNS:
         record:
             The DNS record data to create.
         """
-        data = self._request(
-            "PUT", f"/dnszone/{zone_id}/records", json_body=record.to_dict()
-        )
+        data = self._request("PUT", f"/dnszone/{zone_id}/records", json_body=record.to_dict())
         return DnsRecord.from_dict(data)
 
-    def update_dns_record(
-        self, zone_id: int, record_id: int, record: DnsRecordInput
-    ) -> None:
+    def update_dns_record(self, zone_id: int, record_id: int, record: DnsRecordInput) -> None:
         """Update an existing DNS record.
 
         Parameters

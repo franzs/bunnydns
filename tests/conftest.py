@@ -32,6 +32,7 @@ def mocked_responses():
 # Reusable sample data
 # ---------------------------------------------------------------------------
 
+
 @pytest.fixture
 def sample_record_data() -> dict:
     return {

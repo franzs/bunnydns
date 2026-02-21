@@ -158,7 +158,9 @@ class TestParseEnumLogAnonymizationType:
         ],
     )
     def test_from_int(self, int_val, expected):
-        assert _parse_enum(LogAnonymizationType, int_val, LOG_ANONYMIZATION_TYPE_BY_INT) == expected
+        assert (
+            _parse_enum(LogAnonymizationType, int_val, LOG_ANONYMIZATION_TYPE_BY_INT) == expected
+        )
 
 
 class TestParseEnumCertificateKeyType:
